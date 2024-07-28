@@ -1,8 +1,8 @@
 
 const CosmosClient = require('@azure/cosmos').CosmosClient;
 
-const key = 'jwxfIl30f5xIygvEJx2gdyRErSbi9m5HCB4y6mBitNq8bjOlqPgU9uYnBeUV7dqk0920TNA0RvLMACDbP2d1uQ=='
-const endpoint = 'https://funkyapi.documents.azure.com:443/';
+const key = process.env.DB_KEY
+const endpoint = process.env.DB_URL;
 
 const client = new CosmosClient({ endpoint, key });
 
